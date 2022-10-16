@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaiWuCreateAvatarOptimization", "TaiWuCreateAvatarOptimization\TaiWuCreateAvatarOptimization.csproj", "{6069E549-6EB0-400A-846A-E1FE5EE571C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModCreateAvatarOptimization", "TaiWuCreateAvatarOptimization\ModCreateAvatarOptimization.csproj", "{6069E549-6EB0-400A-846A-E1FE5EE571C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
