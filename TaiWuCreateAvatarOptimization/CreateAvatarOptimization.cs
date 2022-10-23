@@ -175,6 +175,19 @@ namespace TaiWuCreateAvatarOptimization
         }
 
 
+        [HarmonyPostfix, HarmonyPatch(typeof(AvatarAtlasAssets), nameof(AvatarAtlasAssets.GetSprite))]
+        public static void AvatarManager_Post_GetSprite(AvatarManager __instance, string spriteName, sbyte size, ref Sprite __result)
+        {
+            if (__result == null) return;
+            LoadPath();
+            string name = __result.name.Replace("(Clone)", "");
+            var isGet = TryGetRepaceSprite(name, size, out var sprit);
+            if (isGet)
+            {
+                __result = sprit;
+            }
+        }
+
         [HarmonyPostfix, HarmonyPatch(typeof(AvatarManager),nameof(AvatarManager.GetSprite))]
         public static void AvatarManager_Post_GetSprite(AvatarManager __instance, int size, ref Sprite __result)
         {
